@@ -19,17 +19,24 @@
 <h2 align='center'>METHODOLOGY</h2>
 <p>Methodology for the following process comprised of geometry refinement, Domain Preparation in Spaceclaim, meshing the geoemtry for different valve openings, defning the solver details, Solution Details like generating run time residuals and animations, understanding the convergence of results through plots, study results and plot them in MATLAB/python, concluding the project with findings and future scope.</p> 
 
-<h3 align='left'>1. Geometry & Domain</h3>
+
 <table align="center">
 <tbody> 
-  <tr> <th valign='top'><p align='left'>Geometry was cleaned for computation study, and extract the domain of study. Ensured proper domain extraction and noted the dimensions required for the processing part.</p></th>
+  <tr> <th valign='top'><h3 align='left'>1. Geometry & Domain</h3><p align='left'>Geometry was cleaned for computation study, and extract the domain of study. Ensured proper domain extraction and noted the dimensions required for the processing part.</p></th>
       <th><p align='center'><img width="250" height="626" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/>Figure 1: Domain prepared (Mixing Elbow)</p></th>
   </tr>
+<tr> <th valign='top'><h3 align='left'>2. Meshing</h3><p align='left'>The geometry was meshed in Ansys Fluent Mesher. Imported at a tolerance of 0.01mm with Surface mesh of max size 7mm at 12<sup>o</sup> curvature normal angle and 2 cells per gap to capture the effects at the corners properly. Caculated the first boundary layer height at y<sup>+</sup>=1. used Uniform Boundary layer offset method with 12 layers growth rate of 1.01 and 0.00022168mm first layer height. Generating Poly hexcore volumetric mesh for 142154 nodes and 52776 elements.</p></th>
+      <th><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>Figure 2: Meshed Domain (Number of Elements: 52776)</p></th>
+  </tr> 
+<tr> <th valign='top'><h3 align='left'>3. Solver Details</h3>
+      <ul align='left'><li>Study was performed for pressure based solver at steady time for k-omega SST Viscous Model using Coupled based Solver through second order Scheme for pressure, moemntum and other turbulence parameteres.</li>
+            <li>Water was used as Study Fluid, keeping inlet velcoity at 20m/s & 30 m/s for two inlet respectively and temperature at both inlet at 60<sup>o</sup> and 100<sup>o</sup>C and pressure based outlet. None was the convergence criteria, while monitored the flow convergence through area weighted average for temperature and velcoity at outlet and Mass flow rate at inlet and outlet.</li> 
+            <li>Used Hybrid Initialization and ran ~2000 iterations while the convergence was observed around 250 iterations.</li></ul></th>
+      <th> - </th>
+  </tr> 
+
 </tbody>
 </table>
-
-<h3 align='left'>2. Meshing</h3>
-<p align='justify'> The geometry was meshed in Ansys Fluent Mesher. Imported at a tolerance of 0.01mm with Surface mesh of max size 7mm at 12<sup>o</sup> curvature normal angle and 2 cells per gap to capture the effects at the corners properly. Caculated the first boundary layer height at y<sup>+</sup>=1. used Uniform Boundary layer offset method with 12 layers growth rate of 1.01 and 0.00022168mm first layer height. Generating Poly hexcore volumetric mesh of 142154 nodes and 52776 elements. </p><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>Figure 2: Meshed Domain (Number of Elements: 52776)</p>
 
 <h3 align='left'>3. Solver Details</h3>
 <p align='justify'>Study was performed for pressure based solver at steady time for k-omega SST Viscous Model using Coupled based Solver through second order Scheme for pressure, moemntum and other turbulence parameteres.<br/>&nbsp&nbsp&nbsp&nbspWater was used as Study Fluid, keeping inlet velcoity at 20m/s & 30 m/s for two inlet respectively and temperature at both inlet at 60<sup>o</sup> and 100<sup>o</sup>C and pressure based outlet. None was the convergence criteria, while monitored the flow convergence through area weighted average for temperature and velcoity at outlet and Mass flow rate at inlet and outlet. <br/>&nbsp&nbsp&nbsp&nbspUsed Hybrid Initialization and ran ~2000 iterations while the convergence was observed around 250 iterations. </p>
