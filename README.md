@@ -38,8 +38,7 @@
 </tbody>
 </table>
 
-<h3 align='left'>3. Solver Details</h3>
-<p align='justify'>Study was performed for pressure based solver at steady time for k-omega SST Viscous Model using Coupled based Solver through second order Scheme for pressure, moemntum and other turbulence parameteres.<br/>&nbsp&nbsp&nbsp&nbspWater was used as Study Fluid, keeping inlet velcoity at 20m/s & 30 m/s for two inlet respectively and temperature at both inlet at 60<sup>o</sup> and 100<sup>o</sup>C and pressure based outlet. None was the convergence criteria, while monitored the flow convergence through area weighted average for temperature and velcoity at outlet and Mass flow rate at inlet and outlet. <br/>&nbsp&nbsp&nbsp&nbspUsed Hybrid Initialization and ran ~2000 iterations while the convergence was observed around 250 iterations. </p>
+
 
   
 <p>Details for the Methodology can be seen from table below:</p> 
