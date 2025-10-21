@@ -20,7 +20,13 @@
 <p>Methodology for the following process comprised of geometry refinement, Domain Preparation in Spaceclaim, meshing the geoemtry for different valve openings, defning the solver details, Solution Details like generating run time residuals and animations, understanding the convergence of results through plots, study results and plot them in MATLAB/python, concluding the project with findings and future scope.</p> 
 
 <h3 align='left'>1. Geometry & Domain</h3>
-<p align='justify'> Geometry was cleaned for computation study, and extract the domain of study. Ensured proper domain extraction and noted the dimensions required for the processing part.</p><p align='center'><img width="250" height="494" alt="image" src="https://github.com/user-attachments/assets/b5e3abc3-cab9-4e0f-ac37-61f38891ef60" /><br/>Figure 1: Domain prepared (Mixing Elbow)</p>
+<table align="center">
+<tbody> 
+  <tr> <th valign='top'><p align='left'>Geometry was cleaned for computation study, and extract the domain of study. Ensured proper domain extraction and noted the dimensions required for the processing part.</p></th>
+      <th><p align='center'><img width="250" height="626" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/>Figure 1: Domain prepared (Mixing Elbow)</p></th>
+  </tr>
+</tbody>
+</table>
 
 <h3 align='left'>2. Meshing</h3>
 <p align='justify'> The geometry was meshed in Ansys Fluent Mesher. Imported at a tolerance of 0.01mm with Surface mesh of max size 7mm at 12<sup>o</sup> curvature normal angle and 2 cells per gap to capture the effects at the corners properly. Caculated the first boundary layer height at y<sup>+</sup>=1. used Uniform Boundary layer offset method with 12 layers growth rate of 1.01 and 0.00022168mm first layer height. Generating Poly hexcore volumetric mesh of 142154 nodes and 52776 elements. </p><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>Figure 2: Meshed Domain (Number of Elements: 52776)</p>
