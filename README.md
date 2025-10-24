@@ -34,67 +34,27 @@
             <li>Used Hybrid Initialization and ran ~2000 iterations while the convergence was observed around 250 iterations.</li></ul></th>
       <th> - </th>
   </tr> 
+<tr> <th valign='top'><h3 align='left'>4.1. Velocity Results: Flow Domain</h3>
+      <ul align='left'><li>Figure 3 shows how the flow velcoity changes at it transists from 2 inlets to outlet.</li>
+            <li>Red color shows max velocity points/regions & blue color shows the least, lengends can be seen on left center of all images</li>
+      </ul></th>      
+      <th> <p align='center'><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/1ffd80de-c812-4885-9265-c5b4165c58b0" /><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/8f4ea8ed-de38-4e05-9e85-fdea0ac56250" /><br/>Figure 3: Velocity Streamlines, Vectors & Contours (Flow Doamin XY plane)</p>
+</th></tr> 
+<tr> <th valign='top'><h3 align='left'>4.2. Temperature Results: Flow Domain</h3>
+      <ul align='left'><li>Figure 4 shows that velocity contours and velocity vectors highlighting the flow direction and velocity changes.</li>
+      <li>Figure 4 shows Temperature at inlet 1 is 60<sup>o</sup>C and at inlet 2 is 100<sup>o</sup>C, as the flow progress the mixing of temperature can be observed.</li>
+      <li>Red color shows max temperature points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul></th>      
+      <th><p align='center'><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/66d9ab3d-02b7-4703-bad9-54b4679e5f21" /><img width="250" height="503" alt="image" src="https://github.com/user-attachments/assets/e11ba915-22b0-4ed2-b6fb-c0833523b7cb" /><br/>Figure 4: Temperature Contours at outlet</p>
+</th></tr> 
+<tr> <th valign='top'><h3 align='left'>4.3. Velocity and Temperature Profile at Outlet</h3>
+      <ul align='left'><li>Line Coordinates at which the profile data points are extracted: (101.6, 203.2, 9.331), (203.2, 203.2, 1.5553). This line is at the outlet plane.</li>
+      <li>Temperature at 102.1 mm is 333.15 K and at 203.2 mm is 341.31 K. Maximum Temperature at 188.9 mm is 354.18 K</li>
+      <li>Maximum Velocity at 188.4 mm is 25.877 m/s</li></ul></th>      
+      <th><p align='center'><img width="250" height="479" alt="image" src="https://github.com/user-attachments/assets/a7debf1f-03c6-4fd9-96ab-b6a65092285d" /><img width="250" height="478" alt="image" src="https://github.com/user-attachments/assets/f8bfec47-1303-4877-b8ea-ccb8d6055902" /><br/>Figure 5: Temperature & Velocity Profile at Outlet</p>
+</th></tr> 
 
 </tbody>
 </table>
-
-
-
-  
-<p>Details for the Methodology can be seen from table below:</p> 
-<p align="center">Table 1: Details of Project Methodology</p>  
-<table align="center">
-<thead> <tr> <th>Stage</th> <th>Details</th> </tr> </thead>
-<tbody> 
-  <tr> <th>Geometry & Domain</th>
-  <th><img width="776" height="199" alt="image" src="https://github.com/user-attachments/assets/b8d99a99-d004-4786-9fb6-49ddbe87d82a" /><br/>
-    <b>Figure 1: Globe Valve Geometry and Domain</b><br/>
-    <pre><p align="left">Note: <br/> The inlet & outlet were extended to prevent errors during solving like backflow problem.</p></pre>
-    
-  </th></tr>
-  
-  <tr> <th>Meshing</th>
-  <th><img width="728" height="141" alt="image" src="https://github.com/user-attachments/assets/0ab22edf-9bb5-4831-8887-e4c030fdce5c" /><br/>
-    <b>Figure 2: Meshing at different valve openings (1mm, 3mm, 5mm, 11mm, 21mm)</b>
-    <pre><p align="left">Note: <br/> Mesh was generated focusing on area of study that is (1) around the valve and (2) valve opening.
-    For Boundary Layer Mesh, first layer height was calculated at Y<sup>+</sup> < 5. First Layer Height is 8 X 10<sup>-6</sup>
-    Hexcore Volume Mesh was generated with 1mm as max cell length and 4mm  as min cell length
-    Total Elements were ~900000 for all cases withh average orthogonality 0.95</p></pre>
-  </th></tr>
-
-  <tr> <th>Solver Details</th>
-    <th>
-      <pre><p align="left">
-1. Solver:           Pressure Based
-2. Time:             Steady
-3. Viscous Model:    k-omega SST
-4. Material:         Water-liquid
-5. Inlet Boundary:   Pressure type, 4e<sup>5</sup>, 5e<sup>6</sup>, & 8e<sup>8</sup>
-6. Outlet Boundary:  Pressure type, 3e<sup>5</sup>
-7. Method:           Coupled Solver, Quick Scheme for Momentum Equation
-8. Initialization:   Hybrid
-9. Iterations:       5000~10000
-      </p></pre>
-    </th></tr>
-    
-  <tr><th>Results: Pressure & Velocity Contours</th>
-    <th><img width="350" height="1077" alt="Screenshot 2025-10-06 225005" src="https://github.com/user-attachments/assets/9b7f86ea-f5ef-4ed4-8268-66ee1aef6637" /><img width="350" height="1079" alt="Screenshot 2025-10-06 225236" src="https://github.com/user-attachments/assets/a3fa04e4-f37f-414b-8149-86373dace995" /><br/>
-    Figure 3: Pressure & Velocity Contours at Pressure Difference 1bar, 2bar, 5bar for different valve openings</tr>
-
-  <tr><th>Results: Residuals & Report Definition</th>
-    <th><img width="225" height="362" alt="image" src="https://github.com/user-attachments/assets/b2fda2c7-0770-486a-9ae8-7a34c0379351" /><img width="221" height="366" alt="image" src="https://github.com/user-attachments/assets/891551a1-c702-44c9-8324-7164e3422780" /><img width="229" height="357" alt="image" src="https://github.com/user-attachments/assets/94327bf1-000e-40d8-963e-29c4815ffb50" /><br/>
-Figure 4: Residuals, Mass Flow Rate at outlet and Force on valve in y-direction
-<pre><p align="left">Note:
-It is only for one simulation case, there were altogether 15 cases</p></pre>
-    </th></tr>
-
-  <tr><th>Results: Discharge Rate & Mass Flow Rate</th>
-    <th><img width="350" height="723" alt="image" src="https://github.com/user-attachments/assets/ff8cbd49-3fdf-4599-94be-59d69c523fe4" /><img width="350" height="723" alt="image" src="https://github.com/user-attachments/assets/d70ac64e-85a6-4c04-ab75-ea757e5b662f" /><br/>
-Figure 5: Discharge Rate (C<sub>d</sub>) & Mass Flow Rate vs valve opening in Percentage
-</tbody>
-</table>
-</p>
-
 
 <h2 align='center'>DISCUSSION & FUTURE SCOPE</h2>
 <p>In this study CFD Simulations for the Globe Valve over the valve for different valve openings (1mm, 3mm, 5mm, 11mm, 21mm) for different Pressure inlet conditions (4 bar, 5 bar, 8 bar) keeping pressure outlet at 3 bar constant (for all cases). Pressure and Velocity were studied through contours understanding the pressure changes and flow rates at different location. Plot for discharge coefficient and mass flow rate.<br/> 
