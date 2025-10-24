@@ -57,27 +57,44 @@
 </table>
 
 <h2 align='center'>DISCUSSION & FUTURE SCOPE</h2>
-<p>In this study CFD Simulations for the Globe Valve over the valve for different valve openings (1mm, 3mm, 5mm, 11mm, 21mm) for different Pressure inlet conditions (4 bar, 5 bar, 8 bar) keeping pressure outlet at 3 bar constant (for all cases). Pressure and Velocity were studied through contours understanding the pressure changes and flow rates at different location. Plot for discharge coefficient and mass flow rate.<br/> 
-  &nbsp&nbsp It can be observed from the results main pressure drop occured at the valve throat due to diminished area at less valve lift values. The inherent flow coefficient was obtained through CFD keeping the pressure difference constant for full range (1 ~ 21mm) of opening and obtained the discharge Coefficient and mass flow rate.<br/> 
-  &nbsp&nbsp Three most common flow characteristics of a valve which are called quick (fast) opening type, linear type and equal percentage type.
-  <ul>
-    <li><b><i>Quick opening type</i></b> produces a large increase in flow rate for initial increase in valve ope is usually used for safety or cooling system where the instant large flow is required. </li>
-    <li><b><i>Linear type</i></b> has a linear relationship between the flow rate and the valve opening that is commonly used in liquid level conrol applications.</li>
-    <li><b><i>Equal percentage type</i></b> provides a small increase in flow rate with the initial valve openings and a significant rise with the greater openings and is widely found in pressure control and heat transfer process. </li>
-  </ul>
-  &nbsp&nbsp The pressure drop was studied from the contours, the pressure at two planes that comprised of proper representation of valve opening the flow circulation and pressure changes. As it is evident from the graph represented above quick opening flow charateristic and the graph resembles the common characteristic trend for discharge rate and mass flow rate.<br/> <br/>
-  &nbsp&nbsp <b><i>Findings Summarized:</i></b> 
-  <ul>
-    <li>The data generated concluded that there were significant changes in pressure around globe valve specially in small (1mm, 3mm) valve opening, maximum force on the valve 2143.762 N was recorded at pressure difference 5bar and with valve lift the it reduced upto 90.49 N.</li>
-    <li>The discharge rate coefficient reduced with more valve lift decreased while the mass flow rate increased, maximum discharge coefficient 0.6012 was recorded at pressure difference 5bar Pa with minimum mass flow rate 1.54 kg.s<sup>-1</sup>recorded at pressure difference 1bar </li>
-  </ul>
-  &nbsp&nbsp <b><i>Future Scope:</i></b> 
-  <ul>
-    <li>Perform study to capture cavitation effects</li>
-    <li>Perform Preliminary Study and investigate the optimization methods</li>
-    <li>Optimize the design of control valve and reduce the force exerted on valve make globe valve more efficient and reduce loud noise generated from globe valve </li>
-  </ul>
+
+<p>There are two inlet same liquid i.e. water at different velocity (Inlet1 = 20m/s and Inlet2 = 30m/s) and temperature (Inlet1 = 60 degree Celsius and Inlet2 = 100 degree Celsius) are injected in the pipe and undergoes mixing and at Outlet generating:
+<ul><li>Mass Flow Average temperature = 336.507 K</li>
+<li>Max. Temperature at Mid-Section Line = 354.18 K</li></ul>
+
+Mixing Elbow Problem was solved, and results were analyzed. Below is conclusion of findings:
+<ul><li>Maximum temperature recorded is 354.18 K and is not uniform over the entire Outlet of Pipe.</li>
+<li>From the Velocity and Temperature Contour it can be concluded that the flow is not mixed properly.</li></ul>
+
+Temperature and Velocity recorded at outlet: 
+<ul><li>Area Average of Temperature at outlet = 336.111 K</li>
+<li>Area Average of Velocity at outlet = 21.8739 m/s</li>
+<li>Mass Flow Average of Temperature on outlet = 336.507 K</li>
+<li>Mass Flow Average of Velocity on outlet = 22.1749 m/s</li></ul>
 </p>
 
+<p>FLOW CONTROL STRATEGIES:
+<table align='center'>
+      <tbody>
+            <tr><th>METHOD</th><th>MIXING EFFICIENCY INCREASES</th><th>PRESSURE DROP PENALTY</th></tr>
+            <tr><th>HELICAL STATIC MIXER</th><th>+50–70%</th><th>+15–20%</th></tr>
+            <tr><th>PULSATING FLOW</th><th>+30–50%</th><th>+5%</th></tr>
+            <tr><th>ACOUSTIC EXCITATION</th><th>+20–40%</th><th>Negligible</th></tr>
+      </tbody>
+</table></p><br/>
+
+<p>QUANTITATIVE COMPARISON METHODS:
+<table align='center'>
+      <tbody>
+            <tr><th>METHOD</th><th>MECHANISM</th><th>PROS</th><th>CONS</th></tr>
+            <tr><th>CO-FLOW INJECTION</th><th>Secondary fluid injection</th><th>Simple implementation</th><th>Requires extra plumbing</th></tr>
+            <tr><th>ELECTROHYDRODYNAMICS</th><th>Electric field-induced vortices</th><th>No moving parts</th><th>High voltage needed</th></tr>
+            <tr><th>MAGETIC STIRRING</th><th>Ferrofluid + rotating magnets</th><th>Precise control</th><th>Limited to conductive fluids</th></tr>
+      </tbody>
+</table></p><br/>
+<p>
+Final Recommendation:<br/>
+Reduce Smaller inlet Velocity (More CFD Simulations to identify the right velocity) and use Helical Static mixer
+</p>
     
 
