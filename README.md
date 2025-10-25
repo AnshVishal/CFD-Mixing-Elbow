@@ -7,17 +7,14 @@
   <li>Study the flow phenomenon (mixing), velocity and temperature profile</li> 
   <li>Study must be conducted over Inlet-big at 20m/s and 60<sup>o</sup>C and Inlet-Small at 30m/s and 100<sup>o</sup>C</li>
 </ul>
-<p align="left"><b>Note: </b> <i>It is to highlight that this study has been performed to understand the internal fluid flow dynamics (mixing) through the Mixign Elbow geometry and the studied parameters such as Velocity Profile and Temperature changes so as to understand what are the design changes from perspective of a CFD Engineer (Refer to Discussion Section for more details.)</i><br/>Also, this case has been run for the geometry provided by FlowthermoLab while designed a mixing elbow geometry.</p>
+<p align="justify"><b>Note: </b> <i>It is to highlight that this study has been performed to understand the internal fluid flow dynamics (mixing) through the Mixign Elbow geometry and the studied parameters such as Velocity Profile and Temperature changes so as to understand what are the design changes from perspective of a CFD Engineer (Refer to Discussion Section for more details.)</i><br/>Also, this case has been run for the geometry provided by FlowthermoLab while designed a mixing elbow geometry.</p>
 <p align='justify'><b>2. Software Used: </b><br/> Ansys Space-Claim  &nbsp | &nbsp Ansys Fluent Mesher &nbsp | &nbsp Ansys Fluent &nbsp | &nbsp Ansys Post Processor &nbsp | &nbsp MATLAB (for Scientific Plots)</p>
 <p align='justify'><b>3. Skills Demonstrated: </b><br/>Volumetric Geometry/Domain Preparation &nbsp | &nbsp Pressure based & Steady &nbsp | &nbsp Turbulence (k-omega SST) &nbsp | &nbsp Data Post-Processing</p>
 
 
-
-
-
-        
+              
 <h2 align='center'>METHODOLOGY</h2>
-<p>Methodology for the following process comprised of geometry refinement, Domain Preparation in Spaceclaim, meshing the geoemtry for different valve openings, defning the solver details, Solution Details like generating run time residuals and animations, understanding the convergence of results through plots, study results and plot them in MATLAB/python, concluding the project with findings and future scope.</p> 
+<p align='justify'>Methodology for the following process comprised of geometry refinement, Domain Preparation in Spaceclaim, meshing the geoemtry for different valve openings, defning the solver details, Solution Details like generating run time residuals and animations, understanding the convergence of results through plots, study results and plot them in MATLAB/python, concluding the project with findings and future scope.</p> 
 
 
 <table align="center">
