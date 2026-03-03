@@ -48,10 +48,11 @@ Objective: </br>
             <li>First layer height: 0.00022168 mm</li>
             <li>Y+ ≈ 1</li>
             <li>12 boundary layers (growth rate: 1.01)</li>
-            <li>Poly-Hexcore volumetric meshFocused on mesh refinement at: Valve throat, Valve seat, and Valve lift region.</li></ul>
-      Mesh Statistics:
-      <ul><li>Nodes: 142,154</li>
-            <li>Elements: 52,776</li></ul>
+            <li>Poly-Hexcore volumetric meshFocused on mesh refinement at: Valve throat, Valve seat, and Valve lift region.</li>
+            <li>Mesh Statistics:
+                  <ul><li>Nodes: 142,154</li>
+                  <li>Elements: 52,776</li></ul>
+            </li></ul>
 </p>
 <p align = "center"><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>
       <b>Meshed Domain (Number of Elements: 52776)</b></p>
