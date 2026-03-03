@@ -1,59 +1,110 @@
-<h1 align='center'>CFD STUDY OF MIXING ELBOW</h1>
-<p align="center"><i>Disclaimer: This project is a part of an Assignment submitted at Flowthermolab.</i></p>
-<h2 align='center'>OVERVIEW</h2>
-      <p align='left'><b>1. Problem Statement</b></p>
-<ul>
-  <li>Pressure Based Solver, Steady state CFD Simulation</li> 
-  <li>Study the flow phenomenon (mixing), velocity and temperature profile</li> 
-  <li>Study must be conducted over Inlet-big at 20m/s and 60<sup>o</sup>C and Inlet-Small at 30m/s and 100<sup>o</sup>C</li>
-</ul>
-<p align="justify"><b>Note: </b> <i>It is to highlight that this study has been performed to understand the internal fluid flow dynamics (mixing) through the Mixign Elbow geometry and the studied parameters such as Velocity Profile and Temperature changes so as to understand what are the design changes from perspective of a CFD Engineer (Refer to Discussion Section for more details.)</i><br/>Also, this case has been run for the geometry provided by FlowthermoLab while designed a mixing elbow geometry.</p>
-<p align='justify'><b>2. Software Used: </b><br/> Ansys Space-Claim  &nbsp | &nbsp Ansys Fluent Mesher &nbsp | &nbsp Ansys Fluent &nbsp | &nbsp Ansys Post Processor &nbsp | &nbsp MATLAB (for Scientific Plots)</p>
-<p align='justify'><b>3. Skills Demonstrated: </b><br/>Volumetric Geometry/Domain Preparation &nbsp | &nbsp Pressure based & Steady &nbsp | &nbsp Turbulence (k-omega SST) &nbsp | &nbsp Data Post-Processing</p>
+<h1 align='center'>Computing Mizing Elbow</h1>
+<h4 align='center'>Volumetric Geometry/Domain Preparation &nbsp | &nbsp Pressure based & Steady &nbsp | &nbsp Turbulence (k-omega SST) &nbsp | &nbsp Data Post-Processing</h4></h1>
+
+<p align="right">Minor Project - Mixing Elbow,</br> Flowthermolab </br>18/08/2025</p>
+<h2 align='left'>Project Overview</h2>
+<p align = "left">This project presents a steady-state CFD analysis of a Mixing Elbow to investigate:</br>
+<ul><li>Flow mixing behavior</li>
+      <li>Velocity distribution</li>
+      <li>Temperature profile</li>
+      <li>Outlet uniformity</li></ul>
+</p>
+
+<h2 align "left">Problem Statement</h2>
+<p align='left'>Perform a Pressure-Based, Steady-State CFD Simulation to analyze mixing inside a pipe elbow with two inlets:</br>
+<table align = "center">
+      <tr><th>Inlet</th><th>Velocity</th><th>Temperature</th></tr>
+      <tr><td>Big Inlet</td><td>20 m/s</td><td>60<sup>o</sup>C</td></tr>
+      <tr><td>Small Inlet</td><td>30 m/s</td><td>100<sup>o</sup>C</td></tr>
+      <tr><td>Outlet</td><td>Pressure Outlet</td><td> - </td></tr>
+</table>
+Objective: </br>
+<ul><li>Study velocity field behavior</li>
+      <li>Analyze temperature mixing</li>
+      <li>Evaluate outlet flow uniformity</li>
+      <li>Suggest flow control improvements</li></ul>
+</p>
+
+<h2 align = "left">Software Used</h2>
+<p align='justify'>
+      1. &nbsp Ansys Space-Claim ------- Geometry Cleanup and refinement </br> 
+      2. &nbsp Ansys Fluent Mesher ----- Mesh / Grid Generation </br>
+      3. &nbsp Ansys Fluent ------------- Computation </br>
+      4. &nbsp Ansys Post Processor ---- Post Processing </br>
+      5. &nbsp MATLAB ------------------ Data Analysis & Scientific Plots</p>
+ 
+<h2 align = "left">Methodology</h2>
+<h3 align = "left">1. Geometry Cleanup and refinement</h3>
+<p align = "justify">
+      <ul><li>Cleaned provided geometry for computation</li>
+            <li>Internal flow domain extracted for simulation.</li></ul></p>
+<p align = "center"><img width="250" height="626" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/> <b>Domain prepared (Mixing Elbow)</b></p>
+
+<h3 align = "left">2. Mesh Details</h3>
+<p align = "justify">
+      <ul><li>Surface mesh max size: 7 mm</li>
+            <li>Curvature normal angle: 12<sup>o</sup></li>
+            <li>2 cells per gap</li>
+            <li>First layer height: 0.00022168 mm</li>
+            <li>Y+ ≈ 1</li>
+            <li>12 boundary layers (growth rate: 1.01)</li>
+            <li>Poly-Hexcore volumetric meshFocused on mesh refinement at: Valve throat, Valve seat, and Valve lift region.</li></ul>
+      Mesh Statistics:
+      <ul><li>Nodes: 142,154</li>
+            <li>Elements: 52,776</li></ul>
+</p>
+<p align = "center"><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>
+      <b>Meshed Domain (Number of Elements: 52776)</b></p>
 
 
-              
-<h2 align='center'>METHODOLOGY</h2>
-<p align='justify'>Methodology for the following process comprised of geometry refinement, Domain Preparation in Spaceclaim, meshing the geoemtry for different valve openings, defning the solver details, Solution Details like generating run time residuals and animations, understanding the convergence of results through plots, study results and plot them in MATLAB/python, concluding the project with findings and future scope.</p> 
-
-
+<h3 align = "left">3. Solver Settings</h3>
 <table align="center">
-<tbody> 
-  <tr> <th valign='top'><h3 align='left'>1. Geometry & Domain</h3><p align='left'>Geometry was cleaned for computation study, and extract the domain of study. Ensured proper domain extraction and noted the dimensions required for the processing part.</p></th>
-      <th><p align='center'><img width="250" height="626" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/>Figure 1: Domain prepared (Mixing Elbow)</p></th>
-  </tr>
-<tr> <th valign='top'><h3 align='left'>2. Meshing</h3><p align='left'>The geometry was meshed in Ansys Fluent Mesher. Imported at a tolerance of 0.01mm with Surface mesh of max size 7mm at 12<sup>o</sup> curvature normal angle and 2 cells per gap to capture the effects at the corners properly. Caculated the first boundary layer height at y<sup>+</sup>=1. used Uniform Boundary layer offset method with 12 layers growth rate of 1.01 and 0.00022168mm first layer height. Generating Poly hexcore volumetric mesh for 142154 nodes and 52776 elements.</p></th>
-      <th><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>Figure 2: Meshed Domain (Number of Elements: 52776)</p></th>
-  </tr> 
-<tr> <th valign='top'><h3 align='left'>3. Solver Details</h3>
-      <ul align='left'><li>Study was performed for pressure based solver at steady time for k-omega SST Viscous Model using Coupled based Solver through second order Scheme for pressure, moemntum and other turbulence parameteres.</li>
-            <li>Water was used as Study Fluid, keeping inlet velcoity at 20m/s & 30 m/s for two inlet respectively and temperature at both inlet at 60<sup>o</sup> and 100<sup>o</sup>C and pressure based outlet. None was the convergence criteria, while monitored the flow convergence through area weighted average for temperature and velcoity at outlet and Mass flow rate at inlet and outlet.</li> 
-            <li>Used Hybrid Initialization and ran ~2000 iterations while the convergence was observed around 250 iterations.</li></ul></th>
-      <th> - </th>
-  </tr> 
-<tr> <th valign='top'><h3 align='left'>4.1. Velocity Results: Flow Domain</h3>
-      <ul align='left'><li>Figure 3 shows how the flow velcoity changes at it transists from 2 inlets to outlet.</li>
-            <li>Red color shows max velocity points/regions & blue color shows the least, lengends can be seen on left center of all images</li>
-      </ul></th>      
-      <th> <p align='center'><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/1ffd80de-c812-4885-9265-c5b4165c58b0" /><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/8f4ea8ed-de38-4e05-9e85-fdea0ac56250" /><br/>Figure 3: Velocity Streamlines, Vectors & Contours (Flow Doamin XY plane)</p>
-</th></tr> 
-<tr> <th valign='top'><h3 align='left'>4.2. Temperature Results: Flow Domain</h3>
-      <ul align='left'><li>Figure 4 shows that velocity contours and velocity vectors highlighting the flow direction and velocity changes.</li>
-      <li>Figure 4 shows Temperature at inlet 1 is 60<sup>o</sup>C and at inlet 2 is 100<sup>o</sup>C, as the flow progress the mixing of temperature can be observed.</li>
-      <li>Red color shows max temperature points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul></th>      
-      <th><p align='center'><img width="250" height="848" alt="image" src="https://github.com/user-attachments/assets/66d9ab3d-02b7-4703-bad9-54b4679e5f21" /><img width="250" height="503" alt="image" src="https://github.com/user-attachments/assets/e11ba915-22b0-4ed2-b6fb-c0833523b7cb" /><br/>Figure 4: Temperature Contours at outlet</p>
-</th></tr> 
-<tr> <th valign='top'><h3 align='left'>4.3. Velocity and Temperature Profile at Outlet</h3>
-      <ul align='left'><li>Line Coordinates at which the profile data points are extracted: (101.6, 203.2, 9.331), (203.2, 203.2, 1.5553). This line is at the outlet plane.</li>
-      <li>Temperature at 102.1 mm is 333.15 K and at 203.2 mm is 341.31 K. Maximum Temperature at 188.9 mm is 354.18 K</li>
-      <li>Maximum Velocity at 188.4 mm is 25.877 m/s</li></ul></th>      
-      <th><p align='center'><img width="250" height="479" alt="image" src="https://github.com/user-attachments/assets/a7debf1f-03c6-4fd9-96ab-b6a65092285d" /><img width="250" height="478" alt="image" src="https://github.com/user-attachments/assets/f8bfec47-1303-4877-b8ea-ccb8d6055902" /><br/>Figure 5: Temperature & Velocity Profile at Outlet</p>
-</th></tr> 
-
-</tbody>
+<tr><th>Parameter</th><th>Setting</th></tr>
+<tr><td>Solver Type</td><td>Pressure-Based</td></tr>
+<tr><td>Time</td><td>Steady</td></tr>
+<tr><td>Turbulence Model</td><td>k-ω SST</td></tr>
+<tr><td>Material</td><td>Water (Liquid)</td></tr>
+<tr><td>Inlet Velocities</td><td>20 m/s & 30 m/s</td></tr>
+<tr><td>Inlet Temperatures</td><td>60°C & 100°C</td></tr>
+<tr><td>Outlet</td><td>Pressure Outlet</td></tr>
+<tr><td>Discretization</td><td>Second Order Scheme</td></tr>
+<tr><td>Residuals & Monitors</td><td><ul><li>Area-weighted average temperature at outlet</li>
+      <li>Area-weighted average velocity at outlet</li>
+      <li>Mass flow rate balance</li></ul></td></tr>
+<tr><td>Initialization</td><td>Hybrid</td></tr>
+<tr><td>Iterations</td><td>~2000 (Converged ~250)</td></tr>
 </table>
 
-<h2 align='center'>DISCUSSION & FUTURE SCOPE</h2>
+<h3 align = "left">4. Results</h3>
+
+<h4 align = "left">1. Velocity Contours</h4>
+<ul align='left'><li>For Velocity Contours: 
+      <ul><li>Figure below shows how the flow velcoity changes at it transists from 2 inlets to outlet.</li>
+            <li>Red color shows max velocity points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul>
+</li></ul>
+<p align = "center"><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/1ffd80de-c812-4885-9265-c5b4165c58b0" /><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/8f4ea8ed-de38-4e05-9e85-fdea0ac56250" /><br/>
+      <b>Velocity Streamlines, Vectors & Contours (Flow Doamin XY plane)</b></p>
+
+<h4 align = "left">Temperature Contours</h4>
+<ul align='left'><li>For Temperature Contours: 
+      <ul><li>Figure below shows that velocity contours and velocity vectors highlighting the flow direction and velocity changes.</li>
+            <li>Figure 4 shows Temperature at inlet 1 is 60<sup>o</sup>C and at inlet 2 is 100<sup>o</sup>C, as the flow progress the mixing of temperature can be observed.</li>
+            <li>Red color shows max temperature points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul>
+</li></ul>
+<p align = "center"><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/66d9ab3d-02b7-4703-bad9-54b4679e5f21" /><img width="400" height="503" alt="image" src="https://github.com/user-attachments/assets/e11ba915-22b0-4ed2-b6fb-c0833523b7cb" /><br/>
+      <b>Temperature Contours at outlet</b></p>
+
+<h4 align = "left">Velocity and Temperature Profiles</h4>
+<ul align='left'><li>For Velocity & Temperature Profiles: 
+      <ul><li>Line Coordinates at which the profile data points are extracted: (101.6, 203.2, 9.331), (203.2, 203.2, 1.5553). This line is at the outlet plane.</li>
+            <li>Temperature at 102.1 mm is 333.15 K and at 203.2 mm is 341.31 K. Maximum Temperature at 188.9 mm is 354.18 K</li>
+            <li>Maximum Velocity at 188.4 mm is 25.877 m/s</li></ul>
+</li></ul>
+<p align="center"><p align='center'><img width="400" height="479" alt="image" src="https://github.com/user-attachments/assets/a7debf1f-03c6-4fd9-96ab-b6a65092285d" /><img width="400" height="478" alt="image" src="https://github.com/user-attachments/assets/f8bfec47-1303-4877-b8ea-ccb8d6055902" /><br/>
+      <b>Temperature & Velocity Profile at Outlet</b></p>
+
+
+<h2 align='left'>Discussion & Future Scope</h2>
 
 <p>There are two inlet same liquid i.e. water at different velocity (Inlet1 = 20m/s and Inlet2 = 30m/s) and temperature (Inlet1 = 60 degree Celsius and Inlet2 = 100 degree Celsius) are injected in the pipe and undergoes mixing and at Outlet generating:
 <ul><li>Mass Flow Average temperature = 336.507 K</li>
@@ -93,5 +144,22 @@ Temperature and Velocity recorded at outlet:
 Final Recommendation:<br/>
 Reduce Smaller inlet Velocity (More CFD Simulations to identify the right velocity) and use Helical Static mixer
 </p>
-    
+
+<h2>Recommended Repository Structure</h2>
+<pre>
+CFD-Study-Globe-Valve/
+│
+├── README.md
+├── Geometry image
+├── Mesh images
+├── Fluent_Case_Files
+├── Results & Data
+</pre>
+
+<p><b>Author:</b></br> 
+      Ansh Vishal, </br>Aerospace Engineer</br>
+      <a href="anshvishal215@gmail.com">anshvishal215@gmail.com</a></br>
+      <a href="https://www.linkedin.com/in/ansh-vishal/">LinkedIn</a></p>
+
+
 
