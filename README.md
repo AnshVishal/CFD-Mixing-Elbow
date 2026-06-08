@@ -38,7 +38,7 @@ Objective: </br>
 <p align = "justify">
       <ul><li>Cleaned provided geometry for computation</li>
             <li>Internal flow domain extracted for simulation.</li></ul></p>
-<p align = "center"><img width="250" height="626" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/> <b>Domain prepared (Mixing Elbow)</b></p>
+<p align = "center"><img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/259042b6-0fac-45e4-880c-db3c2dfe5958" /><br/> <b>Domain prepared (Mixing Elbow)</b></p>
 
 <h3 align = "left">2. Mesh Details</h3>
 <p align = "justify">
@@ -54,7 +54,7 @@ Objective: </br>
                   <li>Elements: 52,776</li></ul>
             </li></ul>
 </p>
-<p align = "center"><p align='center'><img width="250" height="673" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>
+<p align = "center"><p align='center'><img width="240" height="240" alt="image" src="https://github.com/user-attachments/assets/f4de9db3-dbfe-4765-9a56-37d1cb2e0d80" /><br/>
       <b>Meshed Domain (Number of Elements: 52776)</b></p>
 
 
@@ -83,7 +83,7 @@ Objective: </br>
       <ul><li>Figure below shows how the flow velcoity changes at it transists from 2 inlets to outlet.</li>
             <li>Red color shows max velocity points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul>
 </li></ul>
-<p align = "center"><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/1ffd80de-c812-4885-9265-c5b4165c58b0" /><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/8f4ea8ed-de38-4e05-9e85-fdea0ac56250" /><br/>
+<p align = "center"><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/1ffd80de-c812-4885-9265-c5b4165c58b0" /><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/8f4ea8ed-de38-4e05-9e85-fdea0ac56250" /><br/>
       <b>Velocity Streamlines, Vectors & Contours (Flow Doamin XY plane)</b></p>
 
 <h4 align = "left">Temperature Contours</h4>
@@ -92,7 +92,7 @@ Objective: </br>
             <li>Figure 4 shows Temperature at inlet 1 is 60<sup>o</sup>C and at inlet 2 is 100<sup>o</sup>C, as the flow progress the mixing of temperature can be observed.</li>
             <li>Red color shows max temperature points/regions & blue color shows the least, lengends can be seen on left center of all images</li></ul>
 </li></ul>
-<p align = "center"><img width="400" height="848" alt="image" src="https://github.com/user-attachments/assets/66d9ab3d-02b7-4703-bad9-54b4679e5f21" /><img width="400" height="503" alt="image" src="https://github.com/user-attachments/assets/e11ba915-22b0-4ed2-b6fb-c0833523b7cb" /><br/>
+<p align = "center"><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/66d9ab3d-02b7-4703-bad9-54b4679e5f21" /><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/e11ba915-22b0-4ed2-b6fb-c0833523b7cb" /><br/>
       <b>Temperature Contours at outlet</b></p>
 
 <h4 align = "left">Velocity and Temperature Profiles</h4>
@@ -101,7 +101,7 @@ Objective: </br>
             <li>Temperature at 102.1 mm is 333.15 K and at 203.2 mm is 341.31 K. Maximum Temperature at 188.9 mm is 354.18 K</li>
             <li>Maximum Velocity at 188.4 mm is 25.877 m/s</li></ul>
 </li></ul>
-<p align="center"><p align='center'><img width="400" height="479" alt="image" src="https://github.com/user-attachments/assets/a7debf1f-03c6-4fd9-96ab-b6a65092285d" /><img width="400" height="478" alt="image" src="https://github.com/user-attachments/assets/f8bfec47-1303-4877-b8ea-ccb8d6055902" /><br/>
+<p align="center"><p align='center'><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/a7debf1f-03c6-4fd9-96ab-b6a65092285d" /><img width="360" height="180" alt="image" src="https://github.com/user-attachments/assets/f8bfec47-1303-4877-b8ea-ccb8d6055902" /><br/>
       <b>Temperature & Velocity Profile at Outlet</b></p>
 
 
